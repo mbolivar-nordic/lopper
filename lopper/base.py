@@ -104,7 +104,7 @@ class lopper_base:
             dts_file_dir = os.path.dirname( dts_file )
             if dts_file_dir:
                 dts_dirname = dts_file_dir
-        preprocessed_name = "{0}/{1}.pp".format(dts_dirname,dts_filename)
+        preprocessed_name = os.path.join(dts_dirname, f"{dts_filename}.pp")
 
         includes += dts_dirname
         includes += " "
